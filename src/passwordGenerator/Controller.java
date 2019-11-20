@@ -21,15 +21,22 @@ public class Controller {
 
     public void generate(javafx.event.ActionEvent actionEvent) {
 
-        int passwordLen = Integer.parseInt(passwordLength.getText());
 
         if(!lowercases.isSelected() && !uppercases.isSelected() && !symbols.isSelected() && !numbers.isSelected()){
             //checks to make sure that at least one option is selected
             generatedField.setText("Please Select at least one option");
 
         } else {
-            generatedField.setText(RandomString.getAlphaNumericString(passwordLen, numbers.isSelected(), uppercases.isSelected(),
-                    lowercases.isSelected(), symbols.isSelected()));
+
+            try{
+                int passwordLen = Integer.parseInt(passwordLength.getText());
+                generatedField.setText(RandomString.getAlphaNumericString(passwordLen, numbers.isSelected(), uppercases.isSelected(),
+                        lowercases.isSelected(), symbols.isSelected()));
+            } catch(NumberFormatException e) {
+                generatedField.setText("Please enter a valid password length");
+            }
+
+
         }
 
 
