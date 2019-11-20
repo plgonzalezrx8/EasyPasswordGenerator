@@ -5,8 +5,8 @@
 
 <AnchorPane fx:id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="passwordGenerator.Controller">
    <children>
-      <Button fx:id="generateBtn" layoutX="265.0" layoutY="271.0" mnemonicParsing="false" onAction="#generate" text="Generate" />
-      <TextField fx:id="generatedField" layoutX="223.0" layoutY="175.0" />
+      <Button fx:id="generateBtn" layoutX="265.0" layoutY="336.0" mnemonicParsing="false" onAction="#generate" text="Generate" />
+      <TextField fx:id="generatedField" layoutX="84.0" layoutY="293.0" prefHeight="25.0" prefWidth="428.0" />
       <MenuBar maxWidth="600.0" minWidth="600.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
@@ -26,5 +26,11 @@
           </Menu>
         </menus>
       </MenuBar>
+      <CheckBox fx:id="uppercases" layoutX="152.0" layoutY="183.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Use UPPERCASE" />
+      <CheckBox fx:id="numbers" layoutX="325.0" layoutY="151.0" mnemonicParsing="false" text="Use NUMBERS" />
+      <CheckBox fx:id="symbols" layoutX="326.0" layoutY="183.0" mnemonicParsing="false" text="Use SYMBOLS" />
+      <CheckBox fx:id="lowercases" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" text="Use LOWERCASE" />
+      <TextField fx:id="passwordLength" layoutX="263.0" layoutY="80.0" prefHeight="25.0" prefWidth="44.0" />
+      <Label fx:id="passwordSize" layoutX="152.0" layoutY="84.0" text="Password Length:" />
    </children>
 </AnchorPane>
